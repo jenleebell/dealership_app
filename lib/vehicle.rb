@@ -37,6 +37,16 @@ class Vehicle
     @@all_vehicles
   end
 
+  define_singleton_method(:find) do |identification|
+    found_vehicle = nil
+    @@all_vehicles.each() do |vehicle|
+      if vehicle.id().eql?(identification.to_i())
+        found_vehicle = vehicle
+      end
+    end
+    found_vehicle
+  end
+
   define_method(:save) do
     @@all_vehicles.push(self)
   end
