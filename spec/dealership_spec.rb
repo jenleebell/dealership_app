@@ -57,4 +57,13 @@ describe(Dealership) do
       expect(Dealership.find(test_dealership.id())).to(eq(test_dealership))
     end
   end
+
+  describe('#add_vehicle') do
+    it("adds a new vehicle to a dealership")do
+      test_dealership = Dealership.new("Andrea's Used Cars")
+      test_vehicle = Vehicle.new("Toyota","Prius",2000)
+      test_dealership.add_vehicle(test_vehicle)
+      expect(test_dealership.cars()).to(eq([test_vehicle]))
+    end
+  end
 end
