@@ -26,6 +26,4 @@ describe('the path to view more information about a specific vehicle',{:type => 
   expect(page).to have_content("Toyota Prius 2000")
   end
 end
-
-
 end
