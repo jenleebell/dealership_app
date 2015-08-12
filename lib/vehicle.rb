@@ -16,4 +16,16 @@ class Vehicle
     age = current_year.-(@year)
   end
 
+  define_singleton_method(:clear) do
+    @@all_vehicles = []
+  end
+
+  define_singleton_method(:all) do
+    @@all_vehicles
+  end
+
+  define_method(:save) do
+    @@all_vehicles.push(self)
+  end
+
 end
