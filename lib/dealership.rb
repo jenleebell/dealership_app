@@ -31,5 +31,8 @@ class Dealership
     @@dealerships = []
   end
 
+  # define_singleton_method(:find) do
+  #   found_dealership = nil
+  # end
 
 end

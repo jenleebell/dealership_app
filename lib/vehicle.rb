@@ -5,6 +5,7 @@ class Vehicle
     @make = make
     @model = model
     @year = year
+    @id = @@all_vehicles.length().+(1)
   end
 
   define_method(:make) do
@@ -15,8 +16,12 @@ class Vehicle
     @model
   end
 
-  define_method(:year) do 
+  define_method(:year) do
     @year
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_method(:age) do
