@@ -6,7 +6,6 @@ require('vehicle')
       Vehicle.clear()
     end
 
-
   describe("#age") do
     it("returns the vehicle's age") do
       test_vehicle = Vehicle.new("Toyota","Prius",2000)
@@ -44,12 +43,21 @@ require('vehicle')
     end
   end
 
+  describe("#year") do
+    it("returns the year of the vehicle") do
+      test_vehicle = Vehicle.new("Toyota","Prius",2000)
+      test_vehicle.save()
+      expect(test_vehicle.year()).to(eq(2000))
+    end
+  end
+
+
   describe("#model") do
     it("returns the model of the vehicle") do
       test_vehicle = Vehicle.new("Toyota","Prius",2000)
       test_vehicle.save()
       expect(test_vehicle.model()).to(eq("Prius"))
-    end  
+    end
   end
 
 
